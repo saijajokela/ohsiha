@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "OHSIHA_app"
+    "OHSIHA_app",
+    'accounts.apps.AccountsConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -56,8 +58,7 @@ ROOT_URLCONF = 'ohsiha.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,7 +82,7 @@ DATABASES = {
         'ENGINE' : 'django.db.backends.postgresql',
         'NAME' : 'ohsiha',
         'USER' : 'ohsiha',
-        'PASSWORD' : 'saatana',
+        'PASSWORD' : 'saija',
         'HOST' : 'localhost',
         'PORT' : '',
     }
@@ -125,5 +126,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 django_heroku.settings(locals())
