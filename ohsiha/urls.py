@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 import OHSIHA_app.views
 from django.views.generic.base import TemplateView
+from django.urls import paths
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
