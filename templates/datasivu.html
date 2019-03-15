@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Datasivu</title>
+  </head>
+  <body>
+
+    <body>
+
+    <h1>	Tervetuloa	Bailuappiin!	</h1>
+
+    <p>	Tapahtumat:	</p>
+    <ul>		{%	for	tapahtuma	in	tapahtumalista	%}
+      <li>	<strong>	{{	tapahtuma.name	}}	</strong>		</li>
+      {%	endfor	%}
+    </ul>
+
+    <p><a	href="{%	url	'logout'	%}">Kirjaudu	ulos</a></p>
+    </body>
+  </body>
+</html>

@@ -4,21 +4,27 @@
     <meta charset="utf-8">
     <title>Bailu.net</title>
   </head>
-  <body>
-      <p>Tervetuloa Bailuappiin!</p>
 
-  </body>
 </html>
 
 
-{% block title %}Home{% endblock %}
-
 {% block content %}
-{% if user.is_authenticated %}
-  Hi {{ user.username }}!
-  <p><a href="{% url 'logout' %}">logout</a></p>
-{% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">login</a>
+<body>
+  <p>Tervetuloa Bailuappiin!</p>
+    <a href="datasivu">Tapahtumasivulle<a>
+</body>
+<div>
+  <p><p>
+  {% if user.is_authenticated %}
+    Hei {{ user.username }}!
+    <p><a href="{% url 'logout' %}">logout</a></p>
+  {% else %}
+    <p>You are not logged in</p>
+    <a href="{% url 'login' %}">login</a>
+    <p><strong>No account?</strong></p>
+    <a href="{% url 'signup' %}">Sign up</a>
+  <p><p
+</div>
+
 {% endif %}
 {% endblock %}
